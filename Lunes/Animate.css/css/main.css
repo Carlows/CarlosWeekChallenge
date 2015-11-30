@@ -1,0 +1,58 @@
+
+body{
+	background-color: #ccc;
+	width:100%;
+}
+
+#box1, #box2, #box3{
+	width: 45px;
+	height: 45px;
+	position: absolute;
+	padding:5px;
+}
+
+#box1{
+	background-color:#BE7DF0;
+	top: 0;
+	left: 0;
+}
+
+#box2{
+	background-color:#BEF202;
+
+	top: 50px;
+	left: 0px;
+	text-align: center;
+}
+
+.moveCenter{	
+	animation: moveCenter 3s 1s forwards;
+}
+
+#box3{
+	background-color:#117DF0;
+	top: 100px;
+	left: 0px;
+}
+
+#text{
+	font-size:8px;
+	font-style: normal;
+	font-family: serif;
+}
+
+@keyframes moveCenter{
+	0%{
+		left: 0;		
+		transform: scale(1.0);
+		background-color:#BEF202;
+	}
+	80%{
+		left: 50%;
+	}	
+	100%{
+		left: 50%;
+		transform: scale(4.0, 2.0);
+		background-color:#20a3b8;
+	}
+}
