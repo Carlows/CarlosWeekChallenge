@@ -1,0 +1,24 @@
+use Equipos		// Creates a DB
+db			// Check selected DB
+show dbs		// Check created databases
+
+db.Equipos.insert([{ Nombre: "Barcelona" }, { Nombre: "Madrid" }])
+db.Equipos.find()
+
+db.Equipos.insert({ Nombre: "Madrid", 
+      Jugadores: [ 
+	  { Nombre: "Cristiano", Apellido: "Ronaldo", Edad: 34 }, 
+	  { Nombre: "Karim", Apellido: "Benzema", Edad: 38 
+      }]  
+})
+
+db.Equipos.insert({ Nombre: "Barcelona", 
+      Jugadores: [ 
+	  { Nombre: "Cristiano", Apellido: "Ronaldo", Edad: 34 }, 
+	  { Nombre: "Karim", Apellido: "Benzema", Edad: 38 
+      }]  
+})
+
+db.Equipos.find({ "Nombre": "Barcelona" }).pretty()
+
+http://www.tutorialspoint.com/mongodb/mongodb_covered_queries.htm
